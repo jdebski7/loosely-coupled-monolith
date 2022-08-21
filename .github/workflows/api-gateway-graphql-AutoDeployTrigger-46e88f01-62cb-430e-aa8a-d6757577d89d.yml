@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - 'src/ApiGateway/dev-ops/**'
+    - 'src/ApiGateway/**'
     - '.github/workflows/api-gateway-graphql-AutoDeployTrigger-46e88f01-62cb-430e-aa8a-d6757577d89d.yml'
 
   # Allow mannually trigger 
@@ -37,7 +37,7 @@ jobs:
           push: true
           tags: looselycoupledmonolith.azurecr.io/api-gateway-graphql:${{ github.sha }}
           file: ./src/ApiGateway/dev-ops/Dockerfile
-          context: ./src/ApiGateway/dev-ops/
+          context: ./src
 
 
   deploy:
