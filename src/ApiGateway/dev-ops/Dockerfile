@@ -3,6 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS build
 WORKDIR /app
 
 COPY ./ApiGateway ./ApiGateway
+COPY ./Identities ./Identities
+COPY ./Common ./Common
 
 RUN dotnet restore ./ApiGateway/ApiGateway.GraphQL/ApiGateway.GraphQL.csproj
 RUN dotnet publish ./ApiGateway/ApiGateway.GraphQL -c Release -o ApiGateway.GraphQL --runtime alpine-x64 --self-contained true
