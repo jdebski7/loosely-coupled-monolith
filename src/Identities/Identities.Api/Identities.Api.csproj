@@ -6,4 +6,18 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Common\Common.Exceptions\Common.Exceptions.csproj" />
+      <ProjectReference Include="..\..\Common\Common.Settings\Common.Settings.csproj" />
+      <ProjectReference Include="..\..\Common\Common.Types\Common.Types.csproj" />
+      <ProjectReference Include="..\Identities.Application\Identities.Application.csproj" />
+      <ProjectReference Include="..\Identities.Domain\Identities.Domain.csproj" />
+      <ProjectReference Include="..\Identities.Infrastructure\Identities.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MassTransit" Version="8.0.6" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    </ItemGroup>
+
 </Project>

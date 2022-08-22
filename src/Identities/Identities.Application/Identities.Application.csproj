@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Common\Common.Exceptions\Common.Exceptions.csproj" />
       <ProjectReference Include="..\Identities.Contract\Identities.Contract.csproj" />
       <ProjectReference Include="..\Identities.Domain\Identities.Domain.csproj" />
     </ItemGroup>

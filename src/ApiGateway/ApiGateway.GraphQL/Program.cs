@@ -1,9 +1,15 @@
+using Identities.Api;
+using MassTransit;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddMediator(config =>
+{
+    builder.Services.AddIdentities(config, new IdentitiesApiSettings());
+});
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
